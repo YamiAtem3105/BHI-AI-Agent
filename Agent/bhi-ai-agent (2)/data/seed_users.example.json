@@ -1,0 +1,5 @@
+[
+  {"display_name": "Nguyen Van A", "email": "usera@example.com", "role": "manager", "department": "QLXD", "personal_sheet_id": "SHEET_ID_A"},
+  {"display_name": "Tran Thi B", "email": "userb@example.com", "role": "member", "department": "QLXD", "personal_sheet_id": "SHEET_ID_B"},
+  {"display_name": "Le Van C", "email": "userc@example.com", "role": "member", "department": "QLXD", "personal_sheet_id": "SHEET_ID_C"}
+]

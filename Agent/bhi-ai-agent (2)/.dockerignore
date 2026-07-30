@@ -1,0 +1,36 @@
+# VCS
+.git/
+.gitignore
+
+# Virtual env (sẽ pip install lại trong container)
+.venv/
+venv/
+
+# Caches
+__pycache__/
+*.pyc
+*.pyo
+
+# Local DB & secrets
+*.db
+.env
+
+# Generated artifacts
+exports/
+
+# Docs / requirement source assets (không cần trong runtime)
+out s req/
+docs/
+
+# Tests & debug scripts không cần trong production image
+tests/
+test_*.py
+debug*.py
+
+# IDE
+.idea/
+.vscode/
+
+# OS
+Thumbs.db
+.DS_Store

@@ -1,0 +1,71 @@
+# Python
+__pycache__/
+*.pyc
+*.pyo
+
+# Virtual env
+venv/
+.venv/
+
+# Env / secrets
+.env
+*.db
+
+# Real PII data (giữ ngoài repo; chỉ commit *.example.json + .gitkeep)
+/data/archive_log.json
+/data/staff.json
+/data/personal/*
+!/data/personal/.gitkeep
+!/data/personal/*.example.json
+/data/seed_users.json
+# Messaging & profile PII (email/tên nhân sự thật; chỉ commit *.example.json)
+/data/messaging_links.json
+/data/messaging_pending.json
+/data/staff_profiles.json
+!/data/messaging_links.example.json
+
+# Generated exports (xlsx files created by /api/chat)
+exports/
+
+# Project requirements/diagrams (large binary, not part of source)
+out s req/
+out*/
+
+# Local debug/scratch files at project root
+/debug_query.py
+/debug*.py
+/test_chat.py
+/test_edge.py
+/test_edge2.py
+/test_data_accuracy.py
+/test_final.py
+/_tmp_*.py
+/_deploy_*
+/cloudflared-*.log
+/cloudflared-*.err.log
+/data/Screenshot*.png
+
+# Local DB
+bhi_agent.db
+
+# IDE
+.idea/
+.vscode/
+
+# Logs
+*.log
+
+# Runtime
+server.pid
+
+# Local credentials (chứa mật khẩu demo/Gmail - KHÔNG đẩy lên git)
+/account.txt
+account.txt
+**/account.txt
+
+postgres.env
+*.env
+bhi_agent_db_data/
+*.docx
+*.xlsx
+*.txt

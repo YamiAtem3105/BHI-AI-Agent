@@ -1,0 +1,6 @@
+[
+  {"name": "Admin", "email": "admin@example.com", "google_email": "admin@gmail.com", "file": "", "role": "admin"},
+  {"name": "Nguyen Van A", "email": "usera@example.com", "google_email": "nguyenvana.personal@gmail.com", "file": "https://docs.google.com/spreadsheets/d/SHEET_ID_A/edit", "role": "manager"},
+  {"name": "Tran Thi B", "email": "userb@example.com", "file": "https://docs.google.com/spreadsheets/d/SHEET_ID_B/edit", "role": "member"},
+  {"name": "Le Van C", "email": "userc@example.com", "file": "https://docs.google.com/spreadsheets/d/SHEET_ID_C/edit", "role": "member"}
+]

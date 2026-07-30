@@ -1,0 +1,35 @@
+# Render Blueprint — deploy branch main, URL cố định *.onrender.com
+# Dashboard: https://dashboard.render.com → New > Blueprint > connect repo Nos-hash/bhi-ai-agent
+services:
+  - type: web
+    name: bhi-ai-agent
+    runtime: docker
+    plan: free
+    branch: main
+    dockerfilePath: ./Dockerfile
+    healthCheckPath: /health
+    envVars:
+      - key: DATABASE_URL
+        value: sqlite:////app/bhi_agent.db
+      - key: JWT_SECRET
+        generateValue: true
+      - key: ADMIN_USERNAME
+        value: admin
+      - key: ADMIN_PASSWORD
+        generateValue: true
+      - key: OPENAI_API_KEY
+        sync: false
+      - key: OPENAI_MODEL
+        value: gpt-5.4-mini
+      - key: GOOGLE_CLIENT_ID
+        sync: false
+      - key: GOOGLE_CLIENT_SECRET
+        sync: false
+      - key: PUBLIC_BASE_URL
+        sync: false
+      - key: STAFF_JSON_B64
+        sync: false
+      - key: PERSONAL_JSON_B64
+        sync: false
+      - key: CACHE_TTL_SECONDS
+        value: "300"

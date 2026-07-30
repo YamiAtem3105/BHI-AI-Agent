@@ -1,0 +1,33 @@
+{
+  "user": "Nguyen Van A",
+  "tasks": [
+    {
+      "id": "CO-001",
+      "name": "Sample task",
+      "start_date": "2026-04-07",
+      "end_date": "2026-04-30",
+      "duration_days": 24.0,
+      "predecessor": "",
+      "status": "Đang làm",
+      "elapsed": 1.0,
+      "pic": "Nguyen Van A",
+      "support": "",
+      "reviewer": "",
+      "note": "",
+      "hours": null,
+      "log_history": ""
+    }
+  ],
+  "archive": [
+    {
+      "report_date": "2026-04-10",
+      "user": "Nguyen Van A",
+      "project": "Sample project",
+      "task_content": "Sample work content",
+      "hours": 8.0,
+      "status": "Hoàn thành",
+      "progress": "100%",
+      "report_note": ""
+    }
+  ]
+}
