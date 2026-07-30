@@ -26,22 +26,7 @@ docker-compose up -d
 python scripts/seed_users.py
 ```
 
-## Cấu trúc project
 
-```
-app/
-├── api/google_chat.py      # Webhook endpoint nhận message từ Google Chat
-├── services/
-│   ├── auth_service.py     # Map email → user, phân quyền
-│   ├── agent_service.py    # Gemini LLM + Function Calling orchestration
-│   └── sheets_service.py   # HTTP client gọi Apps Script API
-├── models/models.py        # SQLAlchemy models (6 tables)
-├── prompts/system_prompt.py
-└── config.py
-scripts/
-├── apps_script/Code.gs     # Deploy lên Google Sheets
-└── seed_users.py           # Seed 18 nhân sự QLXD
-```
 
 ## Use Cases
 
