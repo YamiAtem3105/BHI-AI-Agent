@@ -29,41 +29,7 @@ python scripts/seed_users.py
 > Chạy/deploy trên **máy khác** (clone, `.env`, dữ liệu PII, redeploy Apps Script, múi giờ,
 > Render): xem [`docs/deploy-may-khac.md`](docs/deploy-may-khac.md).
 
-## Cấu trúc project
 
-```
-app/
-├── api/                    # FastAPI routers
-│   ├── chat.py             # /api/chat — routing câu hỏi → tool → trả lời
-│   ├── chat_ui.py          # Trang web chat + đăng nhập
-│   ├── dashboard.py        # /api/dashboard, work-pool, tasks CRUD
-│   ├── auth_google.py      # Google OAuth SSO
-│   ├── admin.py            # Trang admin
-│   ├── messaging.py        # Webhook Telegram/Zalo
-│   └── health.py
-├── services/               # Logic nghiệp vụ
-│   ├── sheets_service.py   # HTTP client gọi Apps Script (sheet thật)
-│   ├── mock_sheets.py      # Đọc data/*.json (chạy dev/test offline)
-│   ├── sheets_factory.py   # Chọn real vs mock theo APPS_SCRIPT_URL
-│   ├── query_context.py    # Phân tích câu hỏi → field/keyword/intent
-│   ├── openai_router.py    # Định tuyến tool bằng OpenAI (tùy chọn)
-│   ├── work_pool_service.py# Bể công việc, 3P, so sánh job
-│   ├── write_intent.py     # Phân tích ý định ghi (tạo/cập nhật task)
-│   ├── audit_log.py        # Nhật ký member cập nhật gì → data/audit_log.json (tự tạo)
-│   ├── staff_store.py      # Admin/manager quản lý link file cá nhân (staff.json[].file)
-│   ├── auth_token.py       # JWT session; auth_service.py: map email→nhân sự
-│   ├── rbac.py             # Phân quyền theo vai trò
-│   └── text_utils.py       # Chuẩn hóa tiếng Việt, tìm nhân sự
-├── models/models.py        # SQLAlchemy models
-├── main.py · config.py · db.py
-scripts/
-├── apps_script/Code.gs     # Web App API trên Google Sheets (cần redeploy khi sửa)
-├── sync_env.ps1            # Đồng bộ .env giữa các máy (không qua git)
-├── seed_users.py           # Seed nhân sự QLXD
-└── seed_archive_log.py     # Seed data/archive_log.json mẫu cho test
-docs/                       # Tài liệu, pipeline, phân rã reqs
-tests/                      # Test standalone: python tests/<ten>.py
-_legacy/                    # Snapshot code cũ (.py.txt) — chỉ để tham khảo, KHÔNG import
 ```
 
 ## Use Cases
